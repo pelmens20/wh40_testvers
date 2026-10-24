@@ -1,0 +1,269 @@
+{
+  "pageErrors": [],
+  "steps": [
+    {
+      "step": "campaign modal",
+      "presetCount": 10,
+      "classCount": 3
+    },
+    {
+      "step": "preset start",
+      "started": true,
+      "active": true,
+      "class": "inquisitor",
+      "scene": "sf_intro_inquisitor",
+      "choiceCount": 1,
+      "gameTitle": "✠\nWARHAMMER 40,000 · АРХИВ ИНКВИЗИЦИИ\nКАНЦЕЛЯРИЯ ИМПЕРСКОЙ ОПЕРАЦИИ\nЛОКАЦИЯ:\nДоки Навигатор\nСТАНДАРТНЫЙ ДЕНЬ:\n1\nХРОНОМЕТ",
+      "storyEntries": 2,
+      "storyText": "ВОСХОЖДЕНИЕ В УЛЬЙ // 07:15\nСектор оживает под гулом генераторов.\nПОЛУЧЕН ПРИКАЗ // 07:15\nОрдо Херетикус поручает тебе восстановить дело Кралла и расследовать исчезновения в секторе IX.",
+      "storyData": [
+        {
+          "type": "system",
+          "title": "ВОСХОЖДЕНИЕ В УЛЬЙ",
+          "text": "Сектор оживает под гулом генераторов."
+        },
+        {
+          "type": "system",
+          "title": "ПОЛУЧЕН ПРИКАЗ",
+          "text": "Ордо Херетикус поручает тебе восстановить дело Кралла и расследовать исчезновени"
+        }
+      ],
+      "storyColor": {
+        "color": "rgb(216, 207, 189)",
+        "display": "block",
+        "opacity": "0"
+      }
+    },
+    {
+      "step": "tutorial close",
+      "before": {
+        "done": 1,
+        "skip": 2
+      },
+      "after": 0,
+      "cutsceneSkipCount": 1,
+      "cutsceneOverlayAfterSkip": 0,
+      "storyEntryCountAfterSkip": 3,
+      "storyTextAfterSkip": "ВОСХОЖДЕНИЕ В УЛЬЙ // 07:15\nСектор оживает под гулом генераторов.\nПОЛУЧЕН ПРИКАЗ // 07:15\nОрдо Херетикус поручает тебе восстановить дело Кралла и расследовать исчезновения в секторе IX.\nПРЕДЫСТОРИЯ · ИНКВИЗИТОР // 07:17\nМесяц назад.\n\nВ архиве Ордо Херетикус на Сцилле-Секундус ты нашёл дело без номера — тонкую папку с печатью Кралла, твоего наставника. Внутри значился только улей Хелдон-Прайм, нижние уровни, сектор IX.\n\nТри недели спустя пришёл приказ расследовать исчезновения рабочих. Официальна",
+      "storyCssAfterSkip": {
+        "opacity": "1",
+        "display": "block",
+        "visibility": "visible",
+        "text": "ВОСХОЖДЕНИЕ В УЛЬЙ // 07:15\nСектор оживает под гулом генераторов."
+      },
+      "storyLayoutAfterSkip": {
+        "box": {
+          "rect": {
+            "x": 287.375,
+            "y": 292.4375,
+            "w": 758.25,
+            "h": 345.4375
+          },
+          "opacity": "1",
+          "color": "rgb(216, 207, 189)",
+          "display": "block",
+          "visibility": "visible",
+          "scrollTop": 80,
+          "scrollHeight": 424,
+          "clientHeight": 344
+        },
+        "entry": {
+          "rect": {
+            "x": 311.375,
+            "y": 237.4375,
+            "w": 710.25,
+            "h": 61.75
+          },
+          "opacity": "1",
+          "color": "rgb(216, 207, 189)",
+          "display": "block",
+          "visibility": "visible",
+          "scrollTop": 0,
+          "scrollHeight": 61,
+          "clientHeight": 61
+        },
+        "text": {
+          "rect": {
+            "x": 329.75,
+            "y": 259.4375,
+            "w": 675.5,
+            "h": 22.75
+          },
+          "opacity": "1",
+          "color": "rgb(224, 213, 193)",
+          "display": "block",
+          "visibility": "visible",
+          "scrollTop": 0,
+          "scrollHeight": 23,
+          "clientHeight": 23
+        },
+        "last": {
+          "rect": {
+            "x": 311.375,
+            "y": 376.9375,
+            "w": 710.25,
+            "h": 236
+          },
+          "opacity": "1",
+          "color": "rgb(216, 207, 189)",
+          "display": "block",
+          "visibility": "visible",
+          "scrollTop": 0,
+          "scrollHeight": 236,
+          "clientHeight": 236
+        }
+      }
+    },
+    {
+      "step": "navigation handlers",
+      "count": 16,
+      "results": [
+        {
+          "view": "story",
+          "expected": "story",
+          "actual": "story",
+          "visibleSelector": true
+        },
+        {
+          "view": "character",
+          "expected": "character",
+          "actual": "character",
+          "visibleSelector": true
+        },
+        {
+          "view": "development",
+          "expected": "development",
+          "actual": "development",
+          "visibleSelector": true
+        },
+        {
+          "view": "squad",
+          "expected": "squad",
+          "actual": "squad",
+          "visibleSelector": true
+        },
+        {
+          "view": "inventory",
+          "expected": "inventory",
+          "actual": "inventory",
+          "visibleSelector": true
+        },
+        {
+          "view": "armory",
+          "expected": "armory",
+          "actual": "armory",
+          "visibleSelector": true
+        },
+        {
+          "view": "quests",
+          "expected": "quests",
+          "actual": "quests",
+          "visibleSelector": true
+        },
+        {
+          "view": "operations",
+          "expected": "operations",
+          "actual": "operations",
+          "visibleSelector": true
+        },
+        {
+          "view": "investigation",
+          "expected": "investigation",
+          "actual": "investigation",
+          "visibleSelector": true
+        },
+        {
+          "view": "continuity",
+          "expected": "continuity",
+          "actual": "continuity",
+          "visibleSelector": true
+        },
+        {
+          "view": "map",
+          "expected": "map",
+          "actual": "map",
+          "visibleSelector": true
+        },
+        {
+          "view": "reputation",
+          "expected": "reputation",
+          "actual": "reputation",
+          "visibleSelector": true
+        },
+        {
+          "view": "abilities",
+          "expected": "abilities",
+          "actual": "abilities",
+          "visibleSelector": true
+        },
+        {
+          "view": "journal",
+          "expected": "journal",
+          "actual": "journal",
+          "visibleSelector": true
+        },
+        {
+          "view": "codex",
+          "expected": "codex",
+          "actual": "codex",
+          "visibleSelector": true
+        },
+        {
+          "view": "editor",
+          "expected": "editor",
+          "actual": "editor",
+          "visibleSelector": true
+        }
+      ],
+      "errors": 0
+    },
+    {
+      "step": "create custom characters",
+      "results": [
+        {
+          "selected": "inquisitor",
+          "actual": "inquisitor",
+          "pass": true
+        },
+        {
+          "selected": "guardsman",
+          "actual": "guardsman",
+          "pass": true
+        },
+        {
+          "selected": "spaceMarine",
+          "actual": "spaceMarine",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "step": "save action invoked",
+      "gameStarted": true
+    },
+    {
+      "step": "save slots dialog",
+      "dialogCount": 2,
+      "slotCount": 1
+    }
+  ],
+  "http404": [
+    "http://wh40k.local/assets/portraits/inquisitor-varro.png",
+    "http://wh40k.local/assets/portraits/inquisitor-mara.png",
+    "http://wh40k.local/assets/portraits/inquisitor-vorn.png",
+    "http://wh40k.local/assets/portraits/guardsman-kane.png",
+    "http://wh40k.local/assets/portraits/guardsman-lyra.png",
+    "http://wh40k.local/assets/portraits/guardsman-brek.png",
+    "http://wh40k.local/assets/portraits/marine-acheron.png",
+    "http://wh40k.local/assets/portraits/marine-cato.png",
+    "http://wh40k.local/assets/portraits/marine-draco.png",
+    "http://wh40k.local/assets/portraits/marine-io.png",
+    "http://wh40k.local/assets/classes/inquisitor.png",
+    "http://wh40k.local/assets/classes/guardsman.png",
+    "http://wh40k.local/assets/classes/spaceMarine.png",
+    "http://wh40k.local/assets/avatars/npc/kane.png",
+    "http://wh40k.local/assets/avatars/npc/hest.png"
+  ],
+  "phase": "save-slots",
+  "screenshot": "QA/browser-e2e-save-slots.png"
+}

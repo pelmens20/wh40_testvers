@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const vm=require('node:vm');
+const root=path.resolve(__dirname,'..');
+const events=[];
+const sandbox={GAME:{world:{day:1,hour:23,minute:50},turn:1},Bus:{emit:(name,payload)=>events.push({name,payload})},Math,Number,String};
+vm.createContext(sandbox);
+vm.runInContext(fs.readFileSync(path.join(root,'js/systems/time.js'),'utf8'),sandbox,{filename:'time.js'});
+assert.equal(sandbox.advanceTime(20),true);
+assert.deepEqual([sandbox.GAME.world.day,sandbox.GAME.world.hour,sandbox.GAME.world.minute],[2,0,10]);
+assert.equal(events[0].payload.daysElapsed,1);
+assert.equal(sandbox.advanceTime(2880),true);
+assert.deepEqual([sandbox.GAME.world.day,sandbox.GAME.world.hour,sandbox.GAME.world.minute],[4,0,10]);
+const turn=sandbox.GAME.turn;
+assert.equal(sandbox.advanceTime(0),false);
+assert.equal(sandbox.advanceTime(-5),false);
+assert.equal(sandbox.GAME.turn,turn,'invalid time changes must not advance the turn counter');
+assert.equal(events.length,2,'invalid time changes must not emit events');
+console.log('Time integrity: minute/hour rollover, multi-day advance and invalid deltas — PASS.');

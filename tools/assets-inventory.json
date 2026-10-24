@@ -1,0 +1,891 @@
+{
+  "release": "2.3",
+  "source": "D:\\game\\wh40_testvers\\assets",
+  "expectedFileCount": 126,
+  "imageCount": 121,
+  "audioCount": 5,
+  "files": [
+    {
+      "path": "assets/armor/carapace.png",
+      "name": "Карапасная броня",
+      "category": "armor",
+      "type": "image",
+      "purpose": "Иконка брони в арсенале"
+    },
+    {
+      "path": "assets/armor/flak-armor.png",
+      "name": "Флак-броня",
+      "category": "armor",
+      "type": "image",
+      "purpose": "Иконка брони в арсенале"
+    },
+    {
+      "path": "assets/armor/light-plate.png",
+      "name": "Лёгкий панцирь",
+      "category": "armor",
+      "type": "image",
+      "purpose": "Иконка брони в арсенале"
+    },
+    {
+      "path": "assets/armor/power-armor.png",
+      "name": "Силовая броня",
+      "category": "armor",
+      "type": "image",
+      "purpose": "Иконка брони в арсенале"
+    },
+    {
+      "path": "assets/audio/cathedral-crypt.ogg",
+      "name": "Соборные крипты",
+      "category": "audio",
+      "type": "audio",
+      "purpose": "Фоновая тема храма и катакомб"
+    },
+    {
+      "path": "assets/audio/combat-underscore.ogg",
+      "name": "Боевой эмбиент",
+      "category": "audio",
+      "type": "audio",
+      "purpose": "Фоновая тема боевых столкновений"
+    },
+    {
+      "path": "assets/audio/hive-industrial.ogg",
+      "name": "Промышленный улей",
+      "category": "audio",
+      "type": "audio",
+      "purpose": "Фоновая тема индустриальных локаций"
+    },
+    {
+      "path": "assets/audio/imperial-archive.ogg",
+      "name": "Имперский архив",
+      "category": "audio",
+      "type": "audio",
+      "purpose": "Тема главного меню и архивов"
+    },
+    {
+      "path": "assets/audio/warp-disturbance.ogg",
+      "name": "Варп-аномалия",
+      "category": "audio",
+      "type": "audio",
+      "purpose": "Тема варп-сцен"
+    },
+    {
+      "path": "assets/avatars/enemy/cult-leader.png",
+      "name": "Культоводитель",
+      "category": "avatars/enemy",
+      "type": "image",
+      "purpose": "Аватар противника"
+    },
+    {
+      "path": "assets/avatars/enemy/cultist.png",
+      "name": "Культист",
+      "category": "avatars/enemy",
+      "type": "image",
+      "purpose": "Аватар противника"
+    },
+    {
+      "path": "assets/avatars/enemy/daemonette.png",
+      "name": "Демонетка Слаанеш",
+      "category": "avatars/enemy",
+      "type": "image",
+      "purpose": "Архивный портрет угрозы; не означает её обязательное появление в кампании"
+    },
+    {
+      "path": "assets/avatars/enemy/heretic-marine.png",
+      "name": "Еретик-Астартес",
+      "category": "avatars/enemy",
+      "type": "image",
+      "purpose": "Аватар противника"
+    },
+    {
+      "path": "assets/avatars/enemy/ork.png",
+      "name": "Орк-бойз",
+      "category": "avatars/enemy",
+      "type": "image",
+      "purpose": "Аватар противника"
+    },
+    {
+      "path": "assets/avatars/enemy/pdf.png",
+      "name": "Солдат PDF",
+      "category": "avatars/enemy",
+      "type": "image",
+      "purpose": "Аватар противника"
+    },
+    {
+      "path": "assets/avatars/enemy/renegade.png",
+      "name": "Ренегат PDF",
+      "category": "avatars/enemy",
+      "type": "image",
+      "purpose": "Аватар противника"
+    },
+    {
+      "path": "assets/avatars/enemy/servitor.png",
+      "name": "Боевой сервитор",
+      "category": "avatars/enemy",
+      "type": "image",
+      "purpose": "Аватар противника"
+    },
+    {
+      "path": "assets/avatars/npc/hest.png",
+      "name": "Магос Хест",
+      "category": "avatars/npc",
+      "type": "image",
+      "purpose": "Портрет NPC"
+    },
+    {
+      "path": "assets/avatars/npc/kane.png",
+      "name": "Сержант Кейн",
+      "category": "avatars/npc",
+      "type": "image",
+      "purpose": "Портрет NPC"
+    },
+    {
+      "path": "assets/avatars/npc/lyra.png",
+      "name": "Лира Доминик",
+      "category": "avatars/npc",
+      "type": "image",
+      "purpose": "Портрет NPC"
+    },
+    {
+      "path": "assets/backgrounds/archive.png",
+      "name": "Фон: archive",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/barracks.png",
+      "name": "Фон: barracks",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/catacombs.jpg",
+      "name": "Фон: catacombs",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/catacombs.png",
+      "name": "Фон: catacombs",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/combat.png",
+      "name": "Фон: combat",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/docks.png",
+      "name": "Фон: docks",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/forbidden.png",
+      "name": "Фон: forbidden",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/industrial-cathedral-user.png",
+      "name": "Фон: industrial cathedral user",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/lift.png",
+      "name": "Фон: lift",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/market-user.png",
+      "name": "Фон: market user",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/market.jpg",
+      "name": "Фон: market",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/market.png",
+      "name": "Фон: market",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/morgue.png",
+      "name": "Фон: morgue",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/node.png",
+      "name": "Фон: node",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/promzone.jpg",
+      "name": "Фон: promzone",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/promzone.png",
+      "name": "Фон: promzone",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/ritual-chamber-user.png",
+      "name": "Фон: ritual chamber user",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/sealed-gates-user.png",
+      "name": "Фон: sealed gates user",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/sealed.jpg",
+      "name": "Фон: sealed",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/sealed.png",
+      "name": "Фон: sealed",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/servitorium.png",
+      "name": "Фон: servitorium",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/techchapel.png",
+      "name": "Фон: techchapel",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/temple-user.png",
+      "name": "Фон: temple user",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/temple.jpg",
+      "name": "Фон: temple",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/temple.png",
+      "name": "Фон: temple",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/tunnel.png",
+      "name": "Фон: tunnel",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/backgrounds/warehouse.png",
+      "name": "Фон: warehouse",
+      "category": "backgrounds",
+      "type": "image",
+      "purpose": "Фон локации или главы"
+    },
+    {
+      "path": "assets/branding/boot.png",
+      "name": "Загрузочная иллюстрация",
+      "category": "branding",
+      "type": "image",
+      "purpose": "Фон главного меню"
+    },
+    {
+      "path": "assets/branding/logo.png",
+      "name": "Имперская эмблема",
+      "category": "branding",
+      "type": "image",
+      "purpose": "Водяной знак/эмблема главного меню"
+    },
+    {
+      "path": "assets/branding/seal.png",
+      "name": "Печать Инквизиции",
+      "category": "branding",
+      "type": "image",
+      "purpose": "Печать в архивных элементах и галерее"
+    },
+    {
+      "path": "assets/chaos-gods/khorne.png",
+      "name": "Кхорн",
+      "category": "chaos-gods",
+      "type": "image",
+      "purpose": "Карточка в кодексе Богов Хаоса"
+    },
+    {
+      "path": "assets/chaos-gods/nurgle.png",
+      "name": "Нургл",
+      "category": "chaos-gods",
+      "type": "image",
+      "purpose": "Карточка в кодексе Богов Хаоса"
+    },
+    {
+      "path": "assets/chaos-gods/slaanesh.png",
+      "name": "Слаанеш",
+      "category": "chaos-gods",
+      "type": "image",
+      "purpose": "Карточка в кодексе Богов Хаоса"
+    },
+    {
+      "path": "assets/chaos-gods/tzeentch.png",
+      "name": "Тзинч",
+      "category": "chaos-gods",
+      "type": "image",
+      "purpose": "Карточка в кодексе Богов Хаоса"
+    },
+    {
+      "path": "assets/classes/guardsman.png",
+      "name": "Гвардеец Астра Милитарум",
+      "category": "classes",
+      "type": "image",
+      "purpose": "Карточка выбранного класса и досье"
+    },
+    {
+      "path": "assets/classes/inquisitor.png",
+      "name": "Инквизитор",
+      "category": "classes",
+      "type": "image",
+      "purpose": "Карточка выбранного класса и досье"
+    },
+    {
+      "path": "assets/classes/spaceMarine.png",
+      "name": "Астартес Караула Смерти",
+      "category": "classes",
+      "type": "image",
+      "purpose": "Карточка выбранного класса и досье"
+    },
+    {
+      "path": "assets/classes-icons/guardsman.png",
+      "name": "Знак гвардейца",
+      "category": "classes-icons",
+      "type": "image",
+      "purpose": "Маленькая иконка класса"
+    },
+    {
+      "path": "assets/classes-icons/inquisitor.png",
+      "name": "Знак Инквизитора",
+      "category": "classes-icons",
+      "type": "image",
+      "purpose": "Маленькая иконка класса"
+    },
+    {
+      "path": "assets/classes-icons/spaceMarine.png",
+      "name": "Знак Астартес",
+      "category": "classes-icons",
+      "type": "image",
+      "purpose": "Маленькая иконка класса"
+    },
+    {
+      "path": "assets/conditions/bleed.png",
+      "name": "Кровотечение",
+      "category": "conditions",
+      "type": "image",
+      "purpose": "Иконка состояния"
+    },
+    {
+      "path": "assets/conditions/corruption.png",
+      "name": "Порча",
+      "category": "conditions",
+      "type": "image",
+      "purpose": "Иконка состояния"
+    },
+    {
+      "path": "assets/conditions/cover.png",
+      "name": "Укрытие",
+      "category": "conditions",
+      "type": "image",
+      "purpose": "Иконка состояния"
+    },
+    {
+      "path": "assets/conditions/fatigue.png",
+      "name": "Усталость",
+      "category": "conditions",
+      "type": "image",
+      "purpose": "Иконка состояния"
+    },
+    {
+      "path": "assets/conditions/fear.png",
+      "name": "Страх",
+      "category": "conditions",
+      "type": "image",
+      "purpose": "Иконка состояния"
+    },
+    {
+      "path": "assets/conditions/inspire.png",
+      "name": "Воодушевление",
+      "category": "conditions",
+      "type": "image",
+      "purpose": "Иконка состояния"
+    },
+    {
+      "path": "assets/conditions/jam.png",
+      "name": "Заклинивание",
+      "category": "conditions",
+      "type": "image",
+      "purpose": "Иконка состояния"
+    },
+    {
+      "path": "assets/conditions/poison.png",
+      "name": "Отравление",
+      "category": "conditions",
+      "type": "image",
+      "purpose": "Иконка состояния"
+    },
+    {
+      "path": "assets/conditions/stun.png",
+      "name": "Оглушение",
+      "category": "conditions",
+      "type": "image",
+      "purpose": "Иконка состояния"
+    },
+    {
+      "path": "assets/factions/arbites.png",
+      "name": "Адептус Арбитес",
+      "category": "factions",
+      "type": "image",
+      "purpose": "Иконка ведомства"
+    },
+    {
+      "path": "assets/factions/astartes.png",
+      "name": "Адептус Астартес",
+      "category": "factions",
+      "type": "image",
+      "purpose": "Иконка фракции"
+    },
+    {
+      "path": "assets/factions/chaos.png",
+      "name": "Хаос",
+      "category": "factions",
+      "type": "image",
+      "purpose": "Иконка фракции"
+    },
+    {
+      "path": "assets/factions/ecclesiarchy.png",
+      "name": "Экклезиархия",
+      "category": "factions",
+      "type": "image",
+      "purpose": "Иконка фракции"
+    },
+    {
+      "path": "assets/factions/imperium.png",
+      "name": "Империум Человечества",
+      "category": "factions",
+      "type": "image",
+      "purpose": "Иконка фракции"
+    },
+    {
+      "path": "assets/factions/inquisition.png",
+      "name": "Инквизиция",
+      "category": "factions",
+      "type": "image",
+      "purpose": "Иконка фракции"
+    },
+    {
+      "path": "assets/factions/mechanicus.png",
+      "name": "Адептус Механикус",
+      "category": "factions",
+      "type": "image",
+      "purpose": "Иконка фракции"
+    },
+    {
+      "path": "assets/factions/militarum.png",
+      "name": "Астра Милитарум",
+      "category": "factions",
+      "type": "image",
+      "purpose": "Иконка фракции"
+    },
+    {
+      "path": "assets/factions/orks.png",
+      "name": "Орки",
+      "category": "factions",
+      "type": "image",
+      "purpose": "Иконка фракции"
+    },
+    {
+      "path": "assets/inquisition/ordo-hereticus.png",
+      "name": "Ордо Херетикус",
+      "category": "inquisition",
+      "type": "image",
+      "purpose": "Иконка ордоса"
+    },
+    {
+      "path": "assets/inquisition/ordo-malleus.png",
+      "name": "Ордо Маллеус",
+      "category": "inquisition",
+      "type": "image",
+      "purpose": "Иконка ордоса"
+    },
+    {
+      "path": "assets/inquisition/ordo-xenos.png",
+      "name": "Ордо Ксенос",
+      "category": "inquisition",
+      "type": "image",
+      "purpose": "Иконка ордоса"
+    },
+    {
+      "path": "assets/items/ammo.png",
+      "name": "Боеприпасы",
+      "category": "items",
+      "type": "image",
+      "purpose": "Иконка предмета"
+    },
+    {
+      "path": "assets/items/amulet.png",
+      "name": "Амулет веры",
+      "category": "items",
+      "type": "image",
+      "purpose": "Иконка предмета"
+    },
+    {
+      "path": "assets/items/fragment.png",
+      "name": "Неизвестный фрагмент",
+      "category": "items",
+      "type": "image",
+      "purpose": "Иконка сюжетного предмета"
+    },
+    {
+      "path": "assets/items/medkit.png",
+      "name": "Медикамент",
+      "category": "items",
+      "type": "image",
+      "purpose": "Иконка предмета"
+    },
+    {
+      "path": "assets/items/repair.png",
+      "name": "Ремкомплект",
+      "category": "items",
+      "type": "image",
+      "purpose": "Иконка предмета"
+    },
+    {
+      "path": "assets/items/seal.png",
+      "name": "Печать допуска",
+      "category": "items",
+      "type": "image",
+      "purpose": "Иконка предмета"
+    },
+    {
+      "path": "assets/items/wax.png",
+      "name": "Священный воск",
+      "category": "items",
+      "type": "image",
+      "purpose": "Иконка предмета"
+    },
+    {
+      "path": "assets/legions/loyalist/blood-angels.png",
+      "name": "Кровавые Ангелы",
+      "category": "legions/loyalist",
+      "type": "image",
+      "purpose": "Карточка легиона в кодексе"
+    },
+    {
+      "path": "assets/legions/loyalist/dark-angels.png",
+      "name": "Тёмные Ангелы",
+      "category": "legions/loyalist",
+      "type": "image",
+      "purpose": "Карточка легиона в кодексе"
+    },
+    {
+      "path": "assets/legions/loyalist/imperial-fists.png",
+      "name": "Имперские Кулаки",
+      "category": "legions/loyalist",
+      "type": "image",
+      "purpose": "Карточка легиона в кодексе"
+    },
+    {
+      "path": "assets/legions/loyalist/iron-hands.png",
+      "name": "Железные Руки",
+      "category": "legions/loyalist",
+      "type": "image",
+      "purpose": "Карточка легиона в кодексе"
+    },
+    {
+      "path": "assets/legions/loyalist/raven-guard.png",
+      "name": "Гвардия Ворона",
+      "category": "legions/loyalist",
+      "type": "image",
+      "purpose": "Карточка легиона в кодексе"
+    },
+    {
+      "path": "assets/legions/loyalist/salamanders.png",
+      "name": "Саламандры",
+      "category": "legions/loyalist",
+      "type": "image",
+      "purpose": "Карточка легиона в кодексе"
+    },
+    {
+      "path": "assets/legions/loyalist/space-wolves.png",
+      "name": "Космические Волки",
+      "category": "legions/loyalist",
+      "type": "image",
+      "purpose": "Карточка легиона в кодексе"
+    },
+    {
+      "path": "assets/legions/loyalist/ultramarines.png",
+      "name": "Ультрамарины",
+      "category": "legions/loyalist",
+      "type": "image",
+      "purpose": "Карточка легиона в кодексе"
+    },
+    {
+      "path": "assets/legions/loyalist/white-scars.png",
+      "name": "Белые Шрамы",
+      "category": "legions/loyalist",
+      "type": "image",
+      "purpose": "Карточка легиона в кодексе"
+    },
+    {
+      "path": "assets/legions/traitor/alpha-legion.png",
+      "name": "Альфа-Легион",
+      "category": "legions/traitor",
+      "type": "image",
+      "purpose": "Карточка легиона в кодексе"
+    },
+    {
+      "path": "assets/legions/traitor/death-guard.png",
+      "name": "Гвардия Смерти",
+      "category": "legions/traitor",
+      "type": "image",
+      "purpose": "Карточка легиона в кодексе"
+    },
+    {
+      "path": "assets/legions/traitor/emperors-children.png",
+      "name": "Дети Императора",
+      "category": "legions/traitor",
+      "type": "image",
+      "purpose": "Карточка легиона в кодексе"
+    },
+    {
+      "path": "assets/legions/traitor/iron-warriors.png",
+      "name": "Железные Воины",
+      "category": "legions/traitor",
+      "type": "image",
+      "purpose": "Карточка легиона в кодексе"
+    },
+    {
+      "path": "assets/legions/traitor/night-lords.png",
+      "name": "Повелители Ночи",
+      "category": "legions/traitor",
+      "type": "image",
+      "purpose": "Карточка легиона в кодексе"
+    },
+    {
+      "path": "assets/legions/traitor/sons-of-horus.png",
+      "name": "Сыны Хоруса",
+      "category": "legions/traitor",
+      "type": "image",
+      "purpose": "Карточка легиона в кодексе"
+    },
+    {
+      "path": "assets/legions/traitor/thousand-sons.png",
+      "name": "Тысяча Сынов",
+      "category": "legions/traitor",
+      "type": "image",
+      "purpose": "Карточка легиона в кодексе"
+    },
+    {
+      "path": "assets/legions/traitor/word-bearers.png",
+      "name": "Несущие Слово",
+      "category": "legions/traitor",
+      "type": "image",
+      "purpose": "Карточка легиона в кодексе"
+    },
+    {
+      "path": "assets/legions/traitor/world-eaters.png",
+      "name": "Пожиратели Миров",
+      "category": "legions/traitor",
+      "type": "image",
+      "purpose": "Карточка легиона в кодексе"
+    },
+    {
+      "path": "assets/portraits/guardsman-brek.png",
+      "name": "Капрал Ян Брек",
+      "category": "portraits",
+      "type": "image",
+      "purpose": "Полноразмерный портрет героя или NPC"
+    },
+    {
+      "path": "assets/portraits/guardsman-kane.png",
+      "name": "Сержант Элиас Варн",
+      "category": "portraits",
+      "type": "image",
+      "purpose": "Полноразмерный портрет героя или NPC"
+    },
+    {
+      "path": "assets/portraits/guardsman-lyra.png",
+      "name": "Рядовой Лира Вейл",
+      "category": "portraits",
+      "type": "image",
+      "purpose": "Полноразмерный портрет героя или NPC"
+    },
+    {
+      "path": "assets/portraits/inquisitor-mara.png",
+      "name": "Инквизитор Мара Вейл",
+      "category": "portraits",
+      "type": "image",
+      "purpose": "Полноразмерный портрет героя или NPC"
+    },
+    {
+      "path": "assets/portraits/inquisitor-varro.png",
+      "name": "Инквизитор Кассий Варро",
+      "category": "portraits",
+      "type": "image",
+      "purpose": "Полноразмерный портрет героя или NPC"
+    },
+    {
+      "path": "assets/portraits/inquisitor-vorn.png",
+      "name": "Инквизитор Тал Ворн",
+      "category": "portraits",
+      "type": "image",
+      "purpose": "Полноразмерный портрет героя или NPC"
+    },
+    {
+      "path": "assets/portraits/marine-acheron.png",
+      "name": "Брат Ахерон",
+      "category": "portraits",
+      "type": "image",
+      "purpose": "Полноразмерный портрет героя или NPC"
+    },
+    {
+      "path": "assets/portraits/marine-cato.png",
+      "name": "Брат Като",
+      "category": "portraits",
+      "type": "image",
+      "purpose": "Полноразмерный портрет героя или NPC"
+    },
+    {
+      "path": "assets/portraits/marine-draco.png",
+      "name": "Брат Кай",
+      "category": "portraits",
+      "type": "image",
+      "purpose": "Полноразмерный портрет героя или NPC"
+    },
+    {
+      "path": "assets/portraits/marine-io.png",
+      "name": "Брат Ио",
+      "category": "portraits",
+      "type": "image",
+      "purpose": "Полноразмерный портрет героя или NPC"
+    },
+    {
+      "path": "assets/scenes/cult-truth.png",
+      "name": "Разоблачение культа",
+      "category": "scenes",
+      "type": "image",
+      "purpose": "Иллюстрация ключевой сцены"
+    },
+    {
+      "path": "assets/scenes/cultist-meeting.png",
+      "name": "Встреча с культистом",
+      "category": "scenes",
+      "type": "image",
+      "purpose": "Иллюстрация ключевой сцены"
+    },
+    {
+      "path": "assets/scenes/eleven-marks.png",
+      "name": "Одиннадцать знаков",
+      "category": "scenes",
+      "type": "image",
+      "purpose": "Иллюстрация ключевой сцены"
+    },
+    {
+      "path": "assets/scenes/sealed-door.png",
+      "name": "Запечатанная дверь",
+      "category": "scenes",
+      "type": "image",
+      "purpose": "Иллюстрация ключевой сцены"
+    },
+    {
+      "path": "assets/weapons/bolter.png",
+      "name": "Болтер",
+      "category": "weapons",
+      "type": "image",
+      "purpose": "Иконка оружия"
+    },
+    {
+      "path": "assets/weapons/chainsword.png",
+      "name": "Цепной меч",
+      "category": "weapons",
+      "type": "image",
+      "purpose": "Иконка оружия ближнего боя"
+    },
+    {
+      "path": "assets/weapons/improvised.png",
+      "name": "Импровизированное оружие",
+      "category": "weapons",
+      "type": "image",
+      "purpose": "Иконка оружия"
+    },
+    {
+      "path": "assets/weapons/lasgun.png",
+      "name": "Лазган",
+      "category": "weapons",
+      "type": "image",
+      "purpose": "Иконка оружия"
+    },
+    {
+      "path": "assets/weapons/laspistol.png",
+      "name": "Лазпистолет",
+      "category": "weapons",
+      "type": "image",
+      "purpose": "Иконка оружия"
+    },
+    {
+      "path": "assets/weapons/plasma.png",
+      "name": "Плазмаган",
+      "category": "weapons",
+      "type": "image",
+      "purpose": "Иконка оружия"
+    }
+  ]
+}

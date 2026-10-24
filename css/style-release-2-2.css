@@ -1,0 +1,234 @@
+/* RELEASE 2.2 — visual repair: visible local artwork, centered sigil, measured typography. */
+.boot-screen-menu {
+  position:relative; isolation:isolate; min-height:100vh; height:auto; box-sizing:border-box;
+  padding:clamp(38px,6vh,72px) clamp(16px,3.2vw,48px);
+  gap:0; overflow-x:hidden; overflow-y:auto;
+  background:
+    linear-gradient(90deg,rgba(6,5,4,.78) 0%,rgba(6,5,4,.42) 42%,rgba(6,5,4,.69) 100%),
+    linear-gradient(180deg,rgba(4,4,5,.20) 0%,rgba(4,4,5,.34) 42%,rgba(4,4,5,.72) 100%),
+    var(--boot-art, url("../assets/backgrounds/temple-user.png")) center 47% / cover no-repeat,
+    linear-gradient(145deg,#191510 0%,#0a0908 58%,#15100e 100%);
+}
+.boot-screen-menu::before { inset:clamp(10px,1.2vw,22px); border-color:rgba(218,190,131,.32); box-shadow:inset 0 0 0 6px rgba(0,0,0,.22),inset 0 0 0 7px rgba(199,169,104,.08); }
+.boot-screen-menu::after { width:min(74vw,740px);height:min(74vw,740px);border-color:rgba(199,169,104,.07);box-shadow:0 0 0 38px rgba(199,169,104,.025),0 0 0 78px rgba(199,169,104,.016); }
+.boot-sigil-frame {
+  width:clamp(84px,7vw,104px);height:clamp(84px,7vw,104px);flex:0 0 auto;position:relative;z-index:1;
+  display:grid;place-items:center;overflow:visible;margin:0 auto clamp(16px,2.2vh,24px);
+  border:1px solid rgba(218,190,131,.75);outline:1px solid rgba(218,190,131,.22);outline-offset:5px;
+  background:radial-gradient(circle,rgba(201,168,98,.18),rgba(0,0,0,.34) 72%);
+  box-shadow:inset 0 0 0 5px rgba(201,168,98,.05),0 0 38px rgba(201,168,98,.12);
+}
+.boot-sigil-frame::before { content:"";position:absolute;inset:6px;border:1px solid rgba(201,168,98,.2);pointer-events:none; }
+.imperial-cross { display:block; fill:currentColor; flex:none; }
+.boot-sigil-frame .imperial-cross.boot-sigil {
+  position:relative;width:62%;height:62%;margin:0;padding:0;border:0;outline:0;display:block;
+  color:#e6cf91; filter:drop-shadow(0 0 10px rgba(201,168,98,.36));
+  animation:imperial-sigil-pulse 4.8s ease-in-out infinite;
+}
+@keyframes imperial-sigil-pulse { 0%,100%{filter:drop-shadow(0 0 6px rgba(201,168,98,.20));opacity:.93}50%{filter:drop-shadow(0 0 15px rgba(231,207,146,.48));opacity:1} }
+.boot-screen-menu .boot-title {
+  position:relative;z-index:1;max-width:min(100%,1120px);margin:0 auto;
+  font-family:Georgia,"Times New Roman",serif;font-size:clamp(25px,3.25vw,45px);font-weight:700;
+  letter-spacing:clamp(.04em,.11em, .12em);line-height:1.18;text-wrap:balance;
+  text-shadow:0 2px 2px #000,0 0 22px rgba(201,168,98,.28);
+}
+.boot-screen-menu .boot-sub {
+  position:relative;z-index:1;margin-top:clamp(13px,2vh,19px);font-family:Consolas,"Courier New",monospace;
+  font-size:clamp(10px,.74vw,12px);letter-spacing:clamp(.08em,.17em,.19em);line-height:1.65;color:#d2b57b;
+  font-variant-numeric:tabular-nums lining-nums;
+}
+.boot-screen-menu .boot-line { position:relative;z-index:1;width:min(520px,70%);margin:clamp(20px,3.2vh,30px) auto; }
+.boot-screen-menu .boot-hint {
+  position:relative;z-index:1;width:min(760px,100%);max-width:760px;box-sizing:border-box;
+  margin:0 auto clamp(18px,2.8vh,28px);padding:clamp(13px,1.3vw,18px) clamp(16px,2vw,25px);
+  border:1px solid rgba(201,168,98,.28);border-top-color:rgba(201,168,98,.42);
+  background:rgba(8,7,7,.80);backdrop-filter:blur(3px);color:#e2d7c5;
+  font:400 clamp(14px,.95vw,16px)/1.78 Georgia,"Times New Roman",serif;text-align:center;
+  box-shadow:0 12px 28px rgba(0,0,0,.22);
+}
+.boot-actions { position:relative;z-index:1;width:min(1240px,100%);display:flex;align-items:stretch;justify-content:center;gap:10px;flex-wrap:wrap;margin:0 auto; }
+.boot-actions .danger-btn,.boot-actions .secondary-btn {
+  min-height:43px;padding:11px 15px;max-width:280px;flex:0 1 auto;
+  font-family:Consolas,"Courier New",monospace;font-size:clamp(11px,.72vw,12.5px);font-weight:700;letter-spacing:.055em;line-height:1.4;
+  white-space:normal;text-align:center;text-wrap:balance;overflow-wrap:anywhere;
+  border-radius:1px;font-variant-numeric:tabular-nums lining-nums;
+}
+.boot-actions .danger-btn { min-width:165px; }
+.boot-actions .secondary-btn { min-width:146px; }
+.boot-status { position:relative;z-index:1;min-height:0;width:min(820px,100%);margin:16px auto 0;color:#dec78d;font:11px/1.65 Consolas,"Courier New",monospace;text-align:center; }
+.boot-status:empty { display:none; }
+.boot-disclaimer { position:relative;z-index:1;width:min(980px,100%);margin:clamp(18px,2.8vh,28px) auto 0;padding-top:11px;border-top:1px dashed rgba(201,168,98,.23);color:#b8a17b;text-align:center;font:10px/1.75 Consolas,"Courier New",monospace;letter-spacing:.035em; }
+.boot-screen-menu .boot-actions button:focus-visible,.boot-screen-menu button:focus-visible { outline:2px solid #e7cf92;outline-offset:3px; }
+/* Keep numbers aligned in columns and status rows rather than proportional-font wobble. */
+.top-meta,.top-meta strong,.small-row strong,.stat span,.stat small,.kpi .value,.entry-roll,.progress-label,.director-meter strong,.director-stats,.director-log-line small,.save-slot-index,.save-slot-date,.lore-primer-index strong {
+  font-variant-numeric:tabular-nums lining-nums;
+}
+.top-meta { gap:clamp(10px,1.2vw,20px);font-size:11px;letter-spacing:.035em;line-height:1.5; }
+.top-meta span { align-items:baseline;gap:5px; }
+.top-meta strong { font-size:12px;font-weight:700;color:#e4ca8f; }
+.small-row { font-size:11px;line-height:1.45;gap:8px; }
+.small-row strong { font-size:12px; }
+.stat b,.stat span { font-size:12px;letter-spacing:.025em; }
+.entry-meta { font-size:11px;letter-spacing:.075em; }
+.entry-text { font-size:clamp(14.5px,.98vw,16px);line-height:1.78; }
+.entry-system { font-size:13px;line-height:1.7; }
+.tag { font-size:10px;line-height:1.45;letter-spacing:.04em; }
+.danger-btn,.secondary-btn { font-size:11px;letter-spacing:.055em;line-height:1.45;padding:10px 13px; }
+.nav-btn { line-height:1.5; }
+/* A visible image strip in the chronicle; body text keeps a dark readable surface. */
+.story-location-art { position:relative;width:100%;height:clamp(138px,17vw,220px);min-height:138px;max-height:220px;overflow:hidden;margin:0 0 14px;border:1px solid rgba(201,168,98,.42);background:#08090a;box-shadow:0 9px 25px rgba(0,0,0,.32); }
+.story-location-art img { display:block;width:100%;height:100%;object-fit:cover;object-position:center 48%;filter:contrast(1.04) saturate(.78) brightness(.80); }
+.story-location-art figcaption { position:absolute;inset:auto 0 0;display:flex;align-items:end;justify-content:space-between;gap:12px;padding:22px 16px 12px;background:linear-gradient(180deg,transparent,rgba(4,4,5,.88));color:#e4d5b7; }
+.story-location-art figcaption span { color:#c5a873;font:9px/1.5 Consolas,"Courier New",monospace;letter-spacing:.15em; }
+.story-location-art figcaption strong { font:600 12px/1.4 Georgia,"Times New Roman",serif;letter-spacing:.035em;text-align:right; }
+.story { background-color:rgba(7,8,9,.94);background-blend-mode:normal; }
+/* Scene illustrations are real IMG elements, so the browser can report a missing path and fit the source image reliably. */
+.scene-image { display:block;width:100%;height:auto;aspect-ratio:12/5;max-height:380px;min-height:150px;object-fit:contain;object-position:center;background:#08090a;filter:contrast(1.04) saturate(.92) brightness(.98);cursor:zoom-in; }
+.scene-illustration { padding:0; }
+.scene-caption { font-size:10px;letter-spacing:.11em;line-height:1.55; }
+/* Character portraits retain a themed, local scene backdrop when no portrait file was supplied. */
+.portrait-art-fallback { position:relative;isolation:isolate;overflow:hidden;background:#08090a; }
+.portrait-art-fallback::before { content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(5,5,6,.36),rgba(5,5,6,.60)),var(--portrait-backdrop);background-size:cover;background-position:center;background-repeat:no-repeat;filter:saturate(.72) contrast(1.05); }
+.portrait-art-fallback .portrait-symbol { position:relative;font-size:clamp(56px,5vw,82px);color:#e8d4a1;text-shadow:0 3px 12px #000,0 0 24px rgba(201,168,98,.55); }
+.portrait-fallback-label { position:absolute;z-index:4;left:10px;right:10px;bottom:10px;color:rgba(235,216,174,.84);font:8px/1.3 Consolas,"Courier New",monospace;letter-spacing:.12em;text-align:center;text-shadow:0 1px 4px #000; }
+.brand-mark { width:24px;height:28px;display:grid;place-items:center; }
+.brand-cross { width:23px;height:23px;color:#d9bc7b;filter:drop-shadow(0 0 5px rgba(201,168,98,.23)); }
+.brand-cross path { fill:currentColor; }
+/* Beginner's lore primer */
+.lore-primer-backdrop { z-index:1250; }
+.lore-primer-modal { width:min(900px,calc(100vw - 24px));max-height:min(90vh,900px);overflow:auto;border-color:rgba(201,168,98,.45);box-shadow:0 28px 90px rgba(0,0,0,.82); }
+.lore-primer-body { padding:clamp(16px,3vw,34px); }
+.lore-primer-index { display:flex;justify-content:space-between;align-items:center;gap:14px;color:#b9a476;font:10px/1.5 Consolas,"Courier New",monospace;letter-spacing:.095em; }
+.lore-primer-index strong { color:#e5d1a0;font-size:12px;white-space:nowrap; }
+.lore-primer-index i { color:#82745b;font-style:normal;padding:0 4px; }
+.lore-primer-progress { height:4px;margin:10px 0 28px;background:#2a2118;overflow:hidden; }
+.lore-primer-progress i { display:block;height:100%;background:linear-gradient(90deg,#722326,#dfbd73);transition:width .24s ease; }
+.lore-primer-body article h2 { margin:0 0 14px;font:700 clamp(23px,3vw,34px)/1.25 Georgia,"Times New Roman",serif;letter-spacing:.015em;color:#e8ddc8; }
+.lore-primer-body article > p { margin:0;color:#d6ccbb;font:400 clamp(14px,1.15vw,16px)/1.9 Georgia,"Times New Roman",serif; }
+.lore-primer-body article aside { margin-top:24px;padding:14px 16px;border-left:2px solid #9b2925;background:rgba(130,25,22,.095); }
+.lore-primer-body article aside b { color:#d9bd83;font:10px/1.5 Consolas,"Courier New",monospace;letter-spacing:.13em; }
+.lore-primer-body article aside p { margin:7px 0 0;color:#bfb4a2;font-size:12px;line-height:1.7; }
+.lore-primer-footer { display:flex;justify-content:space-between;align-items:center;gap:14px;padding:13px clamp(16px,3vw,34px) 16px;border-top:1px solid rgba(201,168,98,.18); }
+.lore-primer-footer > span { color:#9c8a68;font:9px/1.5 Consolas,"Courier New",monospace;letter-spacing:.1em; }
+.lore-primer-actions { display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap; }
+.lore-primer-actions button { min-height:38px;padding:9px 12px;font:700 10px/1.4 Consolas,"Courier New",monospace;letter-spacing:.055em; }
+.lore-source-links { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px 16px;margin-top:22px;padding-top:16px;border-top:1px solid rgba(201,168,98,.18); }
+.lore-source-links a { color:#d4bb82;font:11px/1.6 Consolas,"Courier New",monospace;text-decoration:none;border-bottom:1px solid rgba(201,168,98,.18);padding:5px 0; }
+.lore-source-links a:hover { color:#f6e5bc;border-bottom-color:#c9a862; }
+@media(max-width:760px) {
+  .boot-screen-menu { padding:28px 16px 24px;background-position:center,center,56% center,center; }
+  .boot-screen-menu .boot-title { max-width:100%;font-size:clamp(22px,6vw,32px);letter-spacing:.045em; }
+  .boot-screen-menu .boot-sub { font-size:9px;letter-spacing:.075em; }
+  .boot-screen-menu .boot-hint { margin-bottom:17px;padding:13px 14px;font-size:13px;line-height:1.72; }
+  .boot-actions { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px; }
+  .boot-actions .danger-btn,.boot-actions .secondary-btn { min-width:0;max-width:none;width:100%;min-height:46px;padding:9px 8px;font-size:10.5px;letter-spacing:.025em; }
+  .boot-disclaimer { font-size:9px; }
+  .story-location-art { height:145px;min-height:145px; }
+  .story-location-art figcaption { padding:22px 10px 9px; }
+  .story-location-art figcaption span { font-size:8px; }
+  .story-location-art figcaption strong { font-size:11px; }
+  .lore-primer-modal { width:calc(100vw - 12px);max-height:94vh; }
+  .lore-primer-footer { flex-direction:column;align-items:stretch; }
+  .lore-primer-actions { display:grid;grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .lore-primer-actions button:last-child { grid-column:1/-1; }
+  .lore-source-links { grid-template-columns:1fr; }
+}
+@media(prefers-reduced-motion:reduce) { .boot-sigil-frame .imperial-cross.boot-sigil { animation:none; } .lore-primer-progress i { transition:none; } }
+
+/* Fallback thumbnails keep a real local scene texture behind the glyph when a portrait/icon was not supplied. */
+.avatar-art-fallback { position:relative;background-image:linear-gradient(rgba(5,5,6,.40),rgba(5,5,6,.62)),var(--avatar-backdrop);background-size:cover;background-position:center;background-repeat:no-repeat; }
+.avatar-art-fallback .avatar-inner { z-index:2; }
+.avatar-art-fallback .avatar-symbol { font-size:1.45em;color:#ead7a3;text-shadow:0 2px 7px #000,0 0 10px rgba(201,168,98,.48); }
+.avatar-art-fallback .avatar-ripple { z-index:1;opacity:.12; }
+.story-art-unavailable { background:radial-gradient(ellipse at center,rgba(201,168,98,.12),transparent 65%),#08090a; }
+.story-art-unavailable img { display:none; }
+.story-art-unavailable::after { content:"АРХИВНЫЙ ОБРАЗ НЕДОСТУПЕН · ТЕКСТ ХРОНИКИ СОХРАНЁН";position:absolute;inset:auto 10px 10px;text-align:center;color:#d7c08d;font:10px/1.6 Consolas,"Courier New",monospace;letter-spacing:.08em; }
+
+/* RELEASE 2.3 — searchable resource archive and responsive catalog tiles. */
+.boot-brand-watermark { position:absolute;z-index:0;left:50%;top:50%;width:min(62vw,690px);max-height:68vh;object-fit:contain;transform:translate(-50%,-50%);opacity:.035;filter:sepia(1) saturate(.75);pointer-events:none; }
+.boot-footer-seal { width:15px;height:15px;object-fit:contain;vertical-align:middle;margin:0 8px 2px 0;opacity:.78; }
+.asset-archive { min-width:0; }
+.asset-archive-brief { display:flex;justify-content:space-between;align-items:flex-start;gap:18px;padding:14px;margin-bottom:12px;border:1px solid rgba(201,168,98,.24);background:linear-gradient(110deg,rgba(118,29,26,.13),rgba(8,8,9,.45)); }
+.asset-archive-brief > div:first-child { min-width:0; }
+.asset-archive-brief b { color:var(--gold3,#e0c58b);font:700 11px/1.5 Consolas,"Courier New",monospace;letter-spacing:.1em; }
+.asset-archive-brief p { margin:7px 0 0;color:var(--text-secondary,#b9ae9b);font-size:13px;line-height:1.65; }
+.asset-archive-stats { flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-end;gap:3px;text-align:right;font-variant-numeric:tabular-nums; }
+.asset-archive-stats strong { color:#ead7a3;font:700 25px/1.1 Georgia,"Times New Roman",serif; }
+.asset-archive-stats small,.asset-archive-stats span { color:#a99a7b;font:9px/1.5 Consolas,"Courier New",monospace;letter-spacing:.055em; }
+.asset-archive-import-note { margin:8px 0 13px;padding:9px 11px;border-left:2px solid #987a43;background:rgba(201,168,98,.06);color:#bba77d;font:10px/1.6 Consolas,"Courier New",monospace;overflow-wrap:anywhere; }
+.asset-archive-search { margin:12px 0;display:grid;gap:7px; }
+.asset-archive-search label { color:#aa9a78;font:9px/1.5 Consolas,"Courier New",monospace;letter-spacing:.11em; }
+.asset-archive-search > div { display:flex;gap:7px;min-width:0; }
+.asset-archive-search input { flex:1;min-width:0;background:#100f0d;color:#e8ddc8;border:1px solid rgba(201,168,98,.35);padding:10px 12px;font:12px/1.5 Consolas,"Courier New",monospace; }
+.asset-archive-search button { flex:0 0 auto; }
+.asset-archive-categories { display:flex;flex-wrap:wrap;gap:6px;padding:6px 0 12px; }
+.asset-archive-categories .codex-tab { font-size:9px;padding:8px 10px;max-width:100%; }
+.asset-archive-result-count { margin:0 0 10px;color:#a88b54;font:9px/1.5 Consolas,"Courier New",monospace;letter-spacing:.12em; }
+.asset-archive-grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,190px),1fr));gap:10px; }
+.asset-record { min-width:0;overflow:hidden;border:1px solid rgba(201,168,98,.2);background:linear-gradient(180deg,rgba(22,19,15,.86),rgba(8,8,9,.96)); }
+.asset-record-media { height:145px;display:grid;place-items:center;background:radial-gradient(ellipse,rgba(96,65,30,.16),rgba(2,3,4,.95));border-bottom:1px solid rgba(201,168,98,.14);overflow:hidden; }
+.asset-record-media img { width:100%;height:100%;object-fit:contain;padding:5px;box-sizing:border-box; }
+.asset-card-media { width:100%;height:100%; }
+.asset-card-empty { width:100%;height:100%;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;color:#978866;font:9px/1.65 Consolas,"Courier New",monospace;letter-spacing:.06em;padding:10px; }
+.asset-card-empty span { color:#ba9b60;font-size:32px; }
+.asset-card-empty small { color:#7d7158;font-size:8px;letter-spacing:.03em; }
+.asset-card-empty[hidden] { display:none !important; }
+.asset-record-media audio { width:calc(100% - 16px);max-width:100%; }
+.asset-record-copy { padding:10px;display:grid;gap:5px;min-width:0; }
+.asset-record-copy b { color:#e3d2ad;font:700 12px/1.4 Georgia,"Times New Roman",serif;overflow-wrap:anywhere; }
+.asset-record-copy small { color:#b59a63;font:8px/1.5 Consolas,"Courier New",monospace;letter-spacing:.07em; }
+.asset-record-copy p { margin:0;color:#a9a092;font-size:11px;line-height:1.55; }
+.asset-record-copy code { color:#776d59;white-space:normal;overflow-wrap:anywhere;font:9px/1.5 Consolas,"Courier New",monospace; }
+.asset-present { border-color:rgba(128,153,110,.32); }
+.asset-missing { opacity:.76; }
+@media(max-width:650px) {
+  .asset-archive-brief { flex-direction:column; }
+  .asset-archive-stats { align-items:flex-start;text-align:left; }
+  .asset-archive-search > div { flex-wrap:wrap; }
+  .asset-archive-search input { flex-basis:100%; }
+  .asset-archive-grid { grid-template-columns:repeat(2,minmax(0,1fr));gap:7px; }
+  .asset-record-media { height:112px; }
+  .asset-record-copy { padding:8px; }
+}
+
+/* Release 2.3 — standalone asset archive and real character artwork in onboarding. */
+.preset-art { display:block;width:100%;height:100%;object-fit:cover;object-position:center top;filter:saturate(.78) contrast(1.04); }
+.preset-icon { display:grid;place-items:center;background:#08090a;border:1px solid rgba(201,168,98,.25); }
+.preset-icon > span { color:#d9bc7b;font-size:26px; }
+.class-card { position:relative;overflow:hidden; }
+.class-card-art { display:block;width:100%;height:112px;object-fit:cover;object-position:center 20%;margin:0 0 12px;border:1px solid rgba(201,168,98,.22);filter:saturate(.8) contrast(1.04); }
+.asset-archive-screen { position:relative;min-height:100vh;box-sizing:border-box;padding:clamp(16px,3vw,36px);isolation:isolate;overflow-x:hidden;background:linear-gradient(90deg,rgba(5,5,6,.88),rgba(5,5,6,.68)),linear-gradient(180deg,rgba(5,5,6,.25),rgba(5,5,6,.76)),var(--boot-art,url("../assets/backgrounds/temple-user.png")) center 44%/cover fixed no-repeat,#090807; }
+.asset-archive-screen::before { content:"";position:fixed;inset:12px;border:1px solid rgba(201,168,98,.25);pointer-events:none;z-index:-1; }
+.asset-archive-standalone-head { display:flex;align-items:center;justify-content:space-between;gap:18px;max-width:1600px;margin:0 auto 18px;padding:0 0 16px;border-bottom:1px solid rgba(201,168,98,.3); }
+.asset-archive-standalone-head .brand-title { color:#e7d6af;font:700 15px/1.5 Georgia,"Times New Roman",serif;letter-spacing:.09em; }
+.asset-archive-standalone-head .brand-sub { color:#b29a6a;font:9px/1.6 Consolas,"Courier New",monospace;letter-spacing:.1em;margin-top:4px; }
+.asset-archive-standalone-panel { max-width:1600px;margin:0 auto;background:rgba(7,7,8,.94); }
+.asset-archive-standalone-panel .panel-body { padding:clamp(12px,2vw,24px); }
+.asset-archive-standalone-foot { max-width:1600px;margin:14px auto 0;color:#86785d;text-align:center;font:9px/1.6 Consolas,"Courier New",monospace;letter-spacing:.05em; }
+@media(max-width:720px) { .asset-archive-standalone-head { flex-direction:column;align-items:stretch; } .asset-archive-standalone-head .secondary-btn { width:100%; } .class-card-art { height:78px; } }
+
+/* Release 2.3 — Imperial Codex: Ordos and stable image layouts */
+.codex-primer-note {
+  margin: 0 0 18px;
+  padding: 14px 16px;
+  border: 1px solid rgba(190, 156, 88, .3);
+  border-left: 3px solid var(--gold, #c4a566);
+  background: linear-gradient(105deg, rgba(81, 56, 29, .24), rgba(13, 11, 10, .52));
+}
+.codex-primer-note b {
+  display: block;
+  color: var(--gold3, #dfc181);
+  font-size: 10px;
+  letter-spacing: .16em;
+  line-height: 1.6;
+}
+.codex-primer-note p {
+  margin: 6px 0 0;
+  color: var(--text, #d7cdb9);
+  font-size: 13px;
+  line-height: 1.7;
+}
+.inquisition-card { border-left: 3px solid rgba(190, 156, 88, .7); }
+.inquisition-card .codex-card-img { object-fit: contain; padding: 5px; background: rgba(3, 3, 3, .35); }
+.codex-card-img { flex: 0 0 auto; }
+.asset-record-media img { object-fit: cover; }

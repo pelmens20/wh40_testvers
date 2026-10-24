@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+'use strict';
+const fs=require('node:fs');const path=require('node:path');const assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'..');
+const read=r=>fs.readFileSync(path.join(root,r),'utf8');
+const html=read('index.html'), css=read('css/style-release-2-2.css'), render=read('js/ui/render.js'), app=read('js/app.js'), side=read('js/ui/panels.js'), lore=read('js/ui/lore-primer.js');
+assert.match(html,/style-release-2-2\.css/,'Release-specific visual fixes are loaded last');
+assert.match(html,/js\/ui\/lore-primer\.js/,'new-player primer is loaded');
+assert.match(render,/function renderImperialCross/,'SVG cross helper is defined');
+assert.match(render,/class="boot-sigil-frame" aria-label="Имперская печать">\$\{renderImperialCross\("boot-sigil"\)\}/,'cross is rendered as SVG inside the square frame');
+assert.match(render,/const finalBgSrc = chapterBgSrc \|\| locBgSrc \|\| "assets\/backgrounds\/temple\.jpg"/,'chapter art does not wait for image-cache timing');
+assert.match(render,/story-location-art-image/,'visible location banner uses a real image element');
+assert.doesNotMatch(render,/const chapterBgOk = chapterBgSrc && \(typeof isAssetLoaded/,'story art no longer hidden while async cache warms');
+assert.match(css,/url\("\.\.\/assets\/backgrounds\/temple-user\.png"\)/,'menu shows a packaged local background image');
+assert.match(render,/rgba\(8,8,10,\.42\)/,'story backdrop overlay is light enough to show artwork');
+assert.match(css,/font-variant-numeric:tabular-nums lining-nums/,'numbers use consistent tabular numerals');
+assert.match(render,/ВВЕДЕНИЕ В WARHAMMER 40,000/,'menu exposes beginner lore primer');
+assert.match(app,/if\(a === "lore"\)\s+showLorePrimer\(true\)/,'lore primer menu action is wired');
+assert.match(app,/function beginNewCampaignFlow\(\)/,'new campaign routes first-time users through lore');
+assert.match(side,/data-action="lore"/,'primer remains reachable during campaign');
+for(const phrase of ['Ересь Хоруса','Астра Милитарум','Deathwatch','Ордо Ксенос','Сектор IX','не являются официальными','гипотезы']) assert.ok(lore.includes(phrase),`primer covers beginner/lore distinction: ${phrase}`);
+assert.match(lore,/warhammer-community\.com/,'optional official reading sources are provided');
+assert.doesNotMatch(lore,/\bfetch\s*\(|XMLHttpRequest|WebSocket\s*\(/,'primer adds no network requirement');
+console.log('PASS visuals/onboarding: visible local artwork, SVG-aligned cross, coherent typography, lore primer and first-run flow.');

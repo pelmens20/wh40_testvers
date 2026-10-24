@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17100d">
+  <meta name="description" content="Локальная текстовая ролевая игра во вселенной Warhammer 40,000: расследование, тактический бой, решения и архивные записи без нейросетей и сетевых игровых API.">
+  <title>Warhammer 40,000 — Канцелярия Имперской операции | Релиз 2.3</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/lore-ui-overhaul.css">
+  <link rel="stylesheet" href="css/style-release-1-5.css">
+  <link rel="stylesheet" href="css/style-release-2-2.css">
+  <link rel="icon" href="data:,">
+</head>
+<body>
+  <div id="app">
+    <div id="boot" class="boot-screen">
+      <div class="boot-sigil-frame" aria-label="Имперская печать"><svg class="imperial-cross boot-sigil" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path d="M36 5 H64 L59 35 L65 41 L95 36 V64 L65 59 L59 65 L64 95 H36 L41 65 L35 59 L5 64 V36 L35 41 L41 35 Z"/></svg></div>
+      <div class="boot-title">КАНЦЕЛЯРИЯ ИМПЕРСКОЙ ОПЕРАЦИИ</div>
+      <div class="boot-sub">ИМПЕРСКИЙ АРХИВ // СЕКТОР IX // 41-е ТЫСЯЧЕЛЕТИЕ</div>
+      <div class="boot-line"></div>
+      <button id="bootStart" class="danger-btn">ОТКРЫТЬ ИМПЕРСКИЙ АРХИВ</button>
+    </div>
+    <div id="modalRoot"></div>
+  </div>
+
+  <input id="importFile" type="file" accept=".json" hidden>
+
+  <!-- CORE -->
+  <script src="js/core/events-bus.js"></script>
+  <script src="js/core/rng.js"></script>
+  <script src="js/core/state.js"></script>
+
+  <!-- RULES -->
+  <script src="js/rules/difficulty.js"></script>
+  <script src="js/rules/conditions.js"></script>
+  <script src="js/rules/checks.js"></script>
+  <script src="js/rules/damage.js"></script>
+  <script src="js/rules/effects.js"></script>
+
+  <!-- CONTENT -->
+  <script src="js/content/classes.js"></script>
+  <script src="js/content/weapons.js"></script>
+  <script src="js/content/armor.js"></script>
+  <script src="js/content/items.js"></script>
+  <script src="js/content/enemies.js"></script>
+  <script src="js/content/locations.js"></script>
+  <script src="js/content/npcs.js"></script>
+  <script src="js/content/factions.js"></script>
+  <script src="js/content/quests.js"></script>
+  <script src="js/content/presets.js"></script>
+  <script src="js/content/codex-lore.js"></script>
+  <script src="js/content/codex.js"></script>
+  <script src="js/content/rules-lore.js"></script>
+  <script src="js/content/talents.js"></script>
+  <script src="js/content/assets.js"></script>
+  <script src="js/content/asset-inventory.js"></script>
+  <script src="js/content/assets-availability.js"></script>
+  <script src="js/content/companions.js"></script>
+  <script src="js/content/dialogues.js"></script>
+  <script src="js/content/campaigns/ch1_silentForge.js"></script>
+  <script src="js/content/campaigns/ch2_sealedSector.js"></script>
+  <script src="js/content/campaigns/ch3_warpHeart.js"></script>
+  <script src="js/content/campaigns/ch4_ordoJudgment.js"></script>
+  <script src="js/content/campaigns/ch5_afterJudgment.js"></script>
+  <script src="js/content/campaigns/ch6_newHive.js"></script>
+  <script src="js/content/campaigns/ch7_ashProtocol.js"></script>
+  <script src="js/content/campaigns/ch8_resonanceArchive.js"></script>
+  <script src="js/content/campaigns/ch9_witnessLedger.js"></script>
+  <script src="js/content/campaigns/ch10_silentRoute.js"></script>
+  <script src="js/content/campaigns/ch11_15_continuation.js"></script>
+  <script src="js/content/campaigns/registry.js"></script>
+  <script src="js/content/campaigns/chapter-expansions.js"></script>
+
+  <!-- SYSTEMS -->
+  <script src="js/systems/time.js"></script>
+  <script src="js/systems/journal.js"></script>
+  <script src="js/systems/investigation.js"></script>
+  <script src="js/systems/continuity.js"></script>
+  <script src="js/systems/intent.js"></script>
+  <script src="js/systems/resolver.js"></script>
+  <script src="js/systems/repeat.js"></script>
+  <script src="js/systems/talents.js"></script>
+  <script src="js/systems/talents-active.js"></script>  <!-- НОВЫЙ -->
+  <script src="js/systems/corruption.js"></script>
+  <script src="js/systems/dialogue.js"></script>
+  <script src="js/systems/inventory.js"></script>
+  <script src="js/systems/quests.js"></script>
+  <script src="js/systems/reputation.js"></script>
+  <script src="js/systems/combat.js"></script>
+  <script src="js/systems/companions.js"></script>
+  <script src="js/systems/expansion.js"></script>
+  <script src="js/systems/campaign-director.js"></script>
+
+  <!-- ENGINE -->
+  <script src="js/engine/triggers.js"></script>
+  <script src="js/engine/scene.js"></script>
+  <script src="js/engine/audit.js"></script>
+
+  <!-- UI -->
+  <script src="js/ui/dice-roll.js"></script>
+  <script src="js/ui/settings.js"></script>
+  <script src="js/ui/sounds.js"></script>
+  <script src="js/ui/cutscenes.js"></script>  
+  <script src="js/ui/render.js"></script>
+  <script src="js/ui/panels.js"></script>
+  <script src="js/ui/modals.js"></script>
+  <script src="js/ui/lore-primer.js"></script>
+  <script src="js/ui/tutorial.js"></script>
+  <script src="js/ui/hotkeys.js"></script>
+
+  <!-- ARCHIVE / SAVE MANAGEMENT -->
+  <script src="js/ui/save-slots.js"></script>
+
+  <!-- APP -->
+  <script src="js/app.js"></script>
+</body>
+</html>

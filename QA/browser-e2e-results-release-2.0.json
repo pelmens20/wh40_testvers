@@ -1,0 +1,109 @@
+{
+  "release": "2.0",
+  "date": "2026-10-24",
+  "result": "PASS_ISOLATED_CHROMIUM_HARNESS",
+  "workflow": [
+    "startup screen",
+    "open new campaign",
+    "10 character presets listed",
+    "start Inquisitor Cassius Varro",
+    "skip class cutscene",
+    "skip tutorial",
+    "enter class-specific intro",
+    "choose first authored action",
+    "transition to sf_boot"
+  ],
+  "runtime": {
+    "started": true,
+    "classId": "inquisitor",
+    "character": "Инквизитор Кассий Варро",
+    "sceneId": "sf_boot",
+    "worldDirector": true,
+    "scenesVisited": 2,
+    "saveSchema": 12,
+    "chronicleVisible": true,
+    "operationsPanelVisible": true
+  },
+  "errors": {
+    "pageErrors": 0,
+    "consoleErrors": 0
+  },
+  "layout": {
+    "desktop": {
+      "viewport": [
+        1600,
+        1000
+      ],
+      "emblemFrame": [
+        88,
+        88
+      ],
+      "squareRatio": 1,
+      "overlapsTitle": false
+    },
+    "mobile": {
+      "viewport": [
+        390,
+        844
+      ],
+      "documentWidth": 390,
+      "emblemFrame": [
+        72,
+        72
+      ],
+      "squareRatio": 1,
+      "horizontalOverflow": false
+    }
+  },
+  "limitations": [
+    "Browser harness inlined application source due local URL navigation restriction; used in-memory localStorage shim.",
+    "Full manual playthrough of all campaign branches is not completed.",
+    "Relative file-backed artwork/media could not load in the about:blank harness; screenshot verifies layout and interactions, not full scene art or real audio decode.",
+    "Audio track selection tested with a mock Audio adapter; actual decoding, loudness and perceived mix must be checked on the target Windows PC.",
+    "Full manual playthrough of all campaign branches is not completed."
+  ],
+  "separateHttpLauncher": "PASS — see tests/launcher-smoke.py",
+  "audioRouting": {
+    "testAdapter": "mock Audio class in isolated Chromium; no real device playback asserted",
+    "templeLocationTrack": "assets/audio/cathedral-crypt.ogg",
+    "combatContextTrack": "assets/audio/combat-underscore.ogg",
+    "loopEnabled": true,
+    "packagedTracks": [
+      {
+        "path": "assets/audio/imperial-archive.ogg",
+        "codec": "Vorbis",
+        "sampleRate": 22050,
+        "channels": 2,
+        "durationSeconds": 24.0
+      },
+      {
+        "path": "assets/audio/hive-industrial.ogg",
+        "codec": "Vorbis",
+        "sampleRate": 22050,
+        "channels": 2,
+        "durationSeconds": 24.0
+      },
+      {
+        "path": "assets/audio/cathedral-crypt.ogg",
+        "codec": "Vorbis",
+        "sampleRate": 22050,
+        "channels": 2,
+        "durationSeconds": 24.0
+      },
+      {
+        "path": "assets/audio/warp-disturbance.ogg",
+        "codec": "Vorbis",
+        "sampleRate": 22050,
+        "channels": 2,
+        "durationSeconds": 24.0
+      },
+      {
+        "path": "assets/audio/combat-underscore.ogg",
+        "codec": "Vorbis",
+        "sampleRate": 22050,
+        "channels": 2,
+        "durationSeconds": 24.0
+      }
+    ]
+  }
+}

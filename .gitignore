@@ -1,0 +1,27 @@
+# Системные файлы Windows
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Редакторы
+.vscode/
+.idea/
+*.swp
+*.tmp
+*.log
+
+# Временные файлы
+temp/
+tmp/
+cache/
+coverage/
+
+# Локальные сохранения — если не хочешь публиковать их
+# saves/
+# user-data/
+
+# Секреты
+.env
+.env.*
+!.env.example
+secrets/

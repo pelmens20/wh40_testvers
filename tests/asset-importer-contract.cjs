@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+'use strict';
+const fs = require('node:fs');
+const path = require('node:path');
+const assert = require('node:assert/strict');
+const root = path.resolve(__dirname, '..');
+const ps = fs.readFileSync(path.join(root, 'tools/import-user-assets.ps1'), 'utf8');
+const bat = fs.readFileSync(path.join(root, 'start_game.bat'), 'utf8');
+const manual = fs.readFileSync(path.join(root, 'IMPORT_ASSETS.bat'), 'utf8');
+const inventory = JSON.parse(fs.readFileSync(path.join(root, 'tools/assets-inventory.json'), 'utf8'));
+assert.match(ps, /SourcePath\s*=\s*'D:\\game\\wh40_testvers\\assets'/i, 'Windows user asset folder is configured as the importer default');
+assert.match(ps, /ConvertFrom-Json/, 'importer reads the shared 126-resource inventory');
+assert.match(ps, /foreach\s*\(\$item\s+in\s+\$inventory\.files\)/i, 'importer iterates every registered file');
+assert.match(ps, /Copy-Item\s+-LiteralPath\s+\$sourceFile\s+-Destination\s+\$destFile\s+-Force/i, 'importer copies original files into the release assets folder');
+assert.match(ps, /assets-availability\.js/, 'importer refreshes the runtime availability manifest');
+assert.match(ps, /ASSET_IMPORT_REPORT\.txt/, 'importer produces a missing/copied file report');
+assert.match(ps, /not-found; using packaged artwork and fallbacks/i, 'missing source is handled as a reported limitation');
+assert.match(bat, /import-user-assets\.ps1/i, 'standard launcher calls importer');
+assert.ok(bat.indexOf('import-user-assets.ps1') < bat.indexOf('launch_server.py'), 'importer runs before local server is launched');
+assert.match(manual, /import-user-assets\.ps1/i, 'manual importer entrypoint exists');
+assert.equal(inventory.expectedFileCount, 126);
+console.log('PASS asset importer contract: reads 126-entry inventory, copies from the requested Windows source, regenerates availability map, reports missing files and runs before launch.');
+console.log('NOTE: PowerShell execution itself requires Windows; this test checks the importer contract from the build environment.');
